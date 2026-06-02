@@ -1,143 +1,151 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aigentis Portfolio — Premium Telegram Usernames</title>
+    <!-- Підключення Tailwind CSS для стилів вашого макету -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            background-color: #0b141c;
-        }
-    </style>
 </head>
-<body class="text-white font-sans antialiased min-h-screen">
+<body class="bg-[#0b141c] text-white font-sans antialiased min-h-screen">
 
-    <div class="max-w-5xl mx-auto px-4 py-12">
+    <div class="max-w-4xl mx-auto px-4 py-12">
         
-        <header class="flex flex-col items-center justify-center text-center pb-10 mb-10 border-b border-gray-800">
+        <!-- ================= HEADER SECTION (ВЕРХ СТОРІНКИ) ================= -->
+        <header class="flex flex-col items-center justify-center text-center pb-8 mb-10">
             
-            <h1 class="flex items-center gap-3 text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-3">
-                <svg class="w-10 h-10 md:w-12 md:h-12 text-[#24A1DE] shrink-0" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.7-2.48 2.75-2.7.01-.03.01-.14-.05-.2-.06-.06-.15-.04-.21-.03-.1.02-1.64 1.04-4.63 3.06-.44.3-.84.45-1.21.44-.4-.01-1.18-.23-1.75-.41-.7-.23-1.26-.35-1.21-.74.03-.2.3-.41.82-.62 3.22-1.4 5.37-2.33 6.45-2.78 3.07-1.27 3.71-1.49 4.12-1.5.09 0 .3.02.43.13.11.09.14.22.16.31-.01.07.01.14 0 .18z"/>
-                </svg>
-                <span>Aigentis Portfolio</span>
+            <!-- Головний заголовок -->
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+                Aigentis Portfolio
             </h1>
             
-            <p class="text-xs md:text-sm font-bold uppercase tracking-widest text-[#24A1DE]">
-                Premium Telegram Usernames
-            </p>
+            <!-- НОВИЙ БЛОК: Офіційне лого + напис Telegram Usernames замість старого тексту -->
+            <div class="flex items-center gap-2 bg-[#13222d] border border-gray-800 px-4 py-2 rounded-full shadow-inner">
+                <!-- Офіційне кругле SVG-лого Telegram синього кольору -->
+                <svg class="w-5 h-5 text-[#24A1DE] shrink-0" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.7-2.48 2.75-2.7.01-.03.01-.14-.05-.2-.06-.06-.15-.04-.21-.03-.1.02-1.64 1.04-4.63 3.06-.44.3-.84.45-1.21.44-.4-.01-1.18-.23-1.75-.41-.7-.23-1.26-.35-1.21-.74.03-.2.3-.41.82-.62 3.22-1.4 5.37-2.33 6.45-2.78 3.07-1.27 3.71-1.49 4.12-1.5.09 0 .3.02.43.13.11.09.14.22.16.31-.01.07.01.14 0 .18z"/>
+                </svg>
+                <span class="text-sm font-semibold uppercase tracking-wider text-gray-200">Telegram Usernames</span>
+            </div>
             
         </header>
-        <main class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
-            <div class="bg-[#13222d] border border-gray-800 rounded-xl p-6 flex flex-col justify-between hover:border-gray-700 hover:bg-[#162734] transition duration-200">
+
+        <!-- ================= CONTACT LINKS (ТРИ КОНТАКТНІ БЛОКИ) ================= -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <!-- Блок 1: Telegram Broker -->
+            <div class="bg-[#13222d] border border-gray-800 rounded-xl p-4 flex items-center gap-3">
+                <span class="text-xl text-gray-400">💬</span>
                 <div>
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="text-xl">💎</span>
-                        <span class="text-xl font-bold text-white">@finton</span>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        Fintech-native premium identity. The ultimate "Fin + TON" brand for a TON-native crypto wallet or neobank.
-                    </p>
-                </div>
-                <div>
-                    <a href="https://fragment.com/username/finton" target="_blank" class="block text-center bg-[#24A1DE] hover:bg-[#208bbf] text-white font-semibold text-sm py-3 rounded-lg transition duration-200">
-                        Buy on Fragment
-                    </a>
+                    <p class="text-[10px] uppercase tracking-wider text-gray-500 font-bold">Telegram Broker</p>
+                    <p class="text-sm font-bold text-white">@Aigentis</p>
                 </div>
             </div>
 
-            <div class="bg-[#13222d] border border-gray-800 rounded-xl p-6 flex flex-col justify-between hover:border-gray-700 hover:bg-[#162734] transition duration-200">
+            <!-- Блок 2: Official Hub -->
+            <div class="bg-[#13222d] border border-gray-800 rounded-xl p-4 flex items-center gap-3">
+                <span class="text-xl text-gray-400">📢</span>
                 <div>
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="text-xl">🏛️</span>
-                        <span class="text-xl font-bold text-white">@bankzen</span>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        A premium, minimalist neo-banking or FinTech brand name combining security ("bank") with modern, seamless simplicity ("zen").
-                    </p>
-                </div>
-                <div>
-                    <a href="https://fragment.com/username/bankzen" target="_blank" class="block text-center bg-[#24A1DE] hover:bg-[#208bbf] text-white font-semibold text-sm py-3 rounded-lg transition duration-200">
-                        Buy on Fragment (3,900 TON)
-                    </a>
+                    <p class="text-[10px] uppercase tracking-wider text-gray-500 font-bold">Official Hub</p>
+                    <p class="text-sm font-bold text-white">@namesauction</p>
                 </div>
             </div>
 
-            <div class="bg-[#13222d] border border-gray-800 rounded-xl p-6 flex flex-col justify-between hover:border-gray-700 hover:bg-[#162734] transition duration-200">
+            <!-- Блок 3: X (Twitter) -->
+            <div class="bg-[#13222d] border border-gray-800 rounded-xl p-4 flex items-center gap-3">
+                <span class="text-xl text-gray-400">🦜</span>
                 <div>
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="text-xl">👑</span>
-                        <span class="text-xl font-bold text-white">@elitbank</span>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        An exclusive brand name tailored for premium banking services, high-net-worth individual asset management, or private Web3 financial institutions.
-                    </p>
-                </div>
-                <div>
-                    <a href="https://fragment.com/username/elitbank" target="_blank" class="block text-center bg-[#24A1DE] hover:bg-[#208bbf] text-white font-semibold text-sm py-3 rounded-lg transition duration-200">
-                        Buy on Fragment
-                    </a>
+                    <p class="text-[10px] uppercase tracking-wider text-gray-500 font-bold">X (Twitter)</p>
+                    <p class="text-sm font-bold text-white">@aigentisx</p>
                 </div>
             </div>
-
-            <div class="bg-[#13222d] border border-gray-800 rounded-xl p-6 flex flex-col justify-between hover:border-gray-700 hover:bg-[#162734] transition duration-200">
-                <div>
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="text-xl">🤖</span>
-                        <span class="text-xl font-bold text-white">@aigentis</span>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        The definitive brand identity for AI-powered agents, Web3 automated solutions, or neural network infrastructures on the blockchain.
-                    </p>
-                </div>
-                <div>
-                    <a href="https://fragment.com/username/aigentis" target="_blank" class="block text-center bg-[#24A1DE] hover:bg-[#208bbf] text-white font-semibold text-sm py-3 rounded-lg transition duration-200">
-                        Buy on Fragment
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-[#13222d] border border-gray-800 rounded-xl p-6 flex flex-col justify-between hover:border-gray-700 hover:bg-[#162734] transition duration-200">
-                <div>
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="text-xl">🇦🇪</span>
-                        <span class="text-xl font-bold text-white">@dubaiepay</span>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        High-value regional identity for the UAE digital economy. Perfect for mobile payments, crypto gateways, or e-commerce in Dubai.
-                    </p>
-                </div>
-                <div>
-                    <a href="https://fragment.com/username/dubaiepay" target="_blank" class="block text-center bg-[#24A1DE] hover:bg-[#208bbf] text-white font-semibold text-sm py-3 rounded-lg transition duration-200">
-                        Buy on Fragment
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-[#13222d] border border-gray-800 rounded-xl p-6 flex flex-col justify-between hover:border-gray-700 hover:bg-[#162734] transition duration-200">
-                <div>
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="text-xl">⚡</span>
-                        <span class="text-xl font-bold text-white">@emirateon</span>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        Premium hybrid brand blending Middle Eastern tech prestige ("Emirates") with the modern TON blockchain ecosystem ("on").
-                    </p>
-                </div>
-                <div>
-                    <a href="https://fragment.com/username/emirateon" target="_blank" class="block text-center bg-[#24A1DE] hover:bg-[#208bbf] text-white font-semibold text-sm py-3 rounded-lg transition duration-200">
-                        Buy on Fragment
-                    </a>
-                </div>
-            </div>
-
-        </main>
-        <footer class="mt-16 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
-            <p>© 2026 Aigentis. All assets transferred securely via official Fragment smart contracts.</p>
-        </footer>
         </div>
+
+        <!-- ================= DECENTRALIZED INFO BOX ================= -->
+        <div class="bg-[#13222d]/50 border border-gray-800/80 rounded-xl p-4 text-xs text-gray-400 flex items-start gap-2 mb-10">
+            <span class="text-[#24A1DE] shrink-0">🛡️</span>
+            <p class="leading-relaxed">
+                <strong class="text-white font-semibold">Decentralized Smart Contracts:</strong> Click on any digital asset below to view its secure escrow page on Fragment. Payments are accepted exclusively via the TON blockchain ledger.
+            </p>
+        </div>
+
+        <!-- ================= MAIN PORTFOLIO (СПИСОК ІМЕН) ================= -->
+        <section class="mb-16">
+            <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                👑 Flagship Digital Assets
+            </h2>
+
+            <div class="space-y-4">
+                
+                <!-- КАРТКА: @wiseplc -->
+                <div class="bg-[#13222d] border border-gray-800 rounded-xl p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">@wiseplc</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed max-w-xl">
+                            Direct Institutional Match. Exact match with the LSE stock ticker of the multi-billion dollar payment giant Wise plc. Tier-1 financial asset.
+                        </p>
+                    </div>
+                    <button class="bg-[#1f2d37] hover:bg-[#253643] text-white text-xs font-bold tracking-wider px-5 py-2.5 rounded-lg border border-gray-700 uppercase transition shrink-0">
+                        Fragment
+                    </button>
+                </div>
+
+                <!-- КАРТКА: @elitbank -->
+                <div class="bg-[#13222d] border border-gray-800 rounded-xl p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">@elitbank</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed max-w-xl">
+                            Premium Private Banking Identity. High-end brand tailored for elite neo-banks, luxury digital wealth management, VIP crypto-banking, or private offshore solutions.
+                        </p>
+                    </div>
+                    <button class="bg-[#1f2d37] hover:bg-[#253643] text-white text-xs font-bold tracking-wider px-5 py-2.5 rounded-lg border border-gray-700 uppercase transition shrink-0">
+                        Fragment
+                    </button>
+                </div>
+
+                <!-- КАРТКА: @aigentis -->
+                <div class="bg-[#13222d] border border-gray-800 rounded-xl p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">@aigentis</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed max-w-xl">
+                            Flagship AI Brand. Premier, high-end identity for autonomous AI Agents, LLM networks, or enterprise artificial intelligence infrastructure.
+                        </p>
+                    </div>
+                    <button class="bg-[#1f2d37] hover:bg-[#253643] text-white text-xs font-bold tracking-wider px-5 py-2.5 rounded-lg border border-gray-700 uppercase transition shrink-0">
+                        Fragment
+                    </button>
+                </div>
+
+                <!-- КАРТКА: @bankstartup -->
+                <div class="bg-[#13222d] border border-gray-800 rounded-xl p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">@bankstartup</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed max-w-xl">
+                            Venture Fintech Key. Direct-keyword handle built for fintech incubators, digital neo-banks, startup funding platforms, and Web3 wallets.
+                        </p>
+                    </div>
+                    <button class="bg-[#1f2d37] hover:bg-[#253643] text-white text-xs font-bold tracking-wider px-5 py-2.5 rounded-lg border border-gray-700 uppercase transition shrink-0">
+                        Fragment
+                    </button>
+                </div>
+
+                <!-- Ви можете дублювати блоки карток нижче для додавання інших імен -->
+
+            </div>
+        </section>
+
+        <!-- ================= BOTTOM SEO SECTION (ПІД СЕО) ================= -->
+        <footer class="border-t border-gray-800 pt-8 mt-12 text-center">
+            <div class="max-w-2xl mx-auto text-xs text-gray-500 leading-relaxed space-y-2">
+                <p>
+                    Aigentis is a premier digital asset broker specializing in elite Web3 identities, high-growth domains, and exclusive Telegram handles. Every transaction is transparently handled on-chain.
+                </p>
+                <p>
+                    Secure ownership transfers are powered exclusively by Fragment smart contracts deployed on the TON blockchain ecosystem.
+                </p>
+            </div>
+        </footer>
+
+    </div>
 
 </body>
 </html>
