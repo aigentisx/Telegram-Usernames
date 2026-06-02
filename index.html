@@ -8,34 +8,36 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --bg-color: #070a13;
-            --card-bg: rgba(15, 23, 42, 0.35);
-            --card-border: rgba(255, 255, 255, 0.05);
-            --text-main: #f8fafc;
-            --text-muted: #64748b;
+            --card-bg: rgba(15, 23, 42, 0.45);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-main: #ffffff;
+            --text-muted: #94a3b8; /* Світліший сірий для кращої читабельності */
             --accent-blue: #38bdf8;
             --fragment-blue: #007aff;
-            --btn-bg: rgba(255, 255, 255, 0.03);
-            --btn-border: rgba(255, 255, 255, 0.08);
+            --btn-bg: rgba(255, 255, 255, 0.04);
+            --btn-border: rgba(255, 255, 255, 0.12);
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            line-height: 1.4;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
             padding: 40px 20px;
-            background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.03) 0%, transparent 50%);
+            background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.04) 0%, transparent 50%);
             background-attachment: fixed;
         }
 
@@ -51,16 +53,17 @@
 
         header h1 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.6rem;
+            font-size: 2.8rem;
             font-weight: 700;
             letter-spacing: -0.03em;
             margin-bottom: 6px;
+            color: #ffffff;
         }
 
         .subtitle {
             color: var(--accent-blue);
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 0.12em;
             font-weight: 500;
@@ -77,8 +80,8 @@
         .contact-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            padding: 12px 16px;
-            border-radius: 10px;
+            padding: 14px 18px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             gap: 12px;
@@ -88,8 +91,8 @@
         }
 
         .contact-card:hover {
-            border-color: rgba(56, 189, 248, 0.2);
-            background: rgba(15, 23, 42, 0.55);
+            border-color: rgba(56, 189, 248, 0.3);
+            background: rgba(15, 23, 42, 0.7);
         }
 
         .contact-icon {
@@ -99,13 +102,13 @@
         }
 
         .contact-icon svg {
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             fill: currentColor;
         }
 
         .contact-info .label {
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.05em;
@@ -113,20 +116,20 @@
 
         .contact-info .value {
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
         }
 
-        /* Категорії з великими заголовками */
+        /* Категорії */
         .category-section {
-            margin-bottom: 45px;
+            margin-bottom: 50px;
         }
 
         .category-title {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 12px;
@@ -137,14 +140,14 @@
             content: '';
             flex: 1;
             height: 1px;
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent);
         }
 
-        /* Компактна сітка 2х2 з описами */
+        /* Компактна сітка 2х2 */
         .assets-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
+            gap: 14px;
         }
 
         .asset-item {
@@ -155,19 +158,20 @@
         .asset-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 10px;
-            padding: 14px 16px;
+            border-radius: 12px;
+            padding: 18px 20px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 100%;
-            gap: 10px;
+            gap: 12px;
             transition: all 0.2s ease;
         }
 
         .asset-item:hover .asset-card {
-            border-color: rgba(255, 255, 255, 0.12);
-            background: rgba(15, 23, 42, 0.6);
+            border-color: rgba(56, 189, 248, 0.3);
+            background: rgba(15, 23, 42, 0.65);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .asset-main {
@@ -177,12 +181,14 @@
             gap: 10px;
         }
 
+        /* Збільшений та чіткий шрифт для юзернеймів */
         .asset-name {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--text-main);
-            letter-spacing: -0.01em;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.35rem; /* Збільшено розмір для ідеальної читабельності */
+            font-weight: 700;   /* Більш жирний та виразний */
+            color: #ffffff;
+            letter-spacing: -0.02em;
+            text-shadow: none;  /* Повністю прибрано глітч-ефекти */
         }
 
         .asset-item:hover .asset-name {
@@ -190,19 +196,19 @@
         }
 
         .asset-desc {
-            font-size: 0.8rem;
+            font-size: 0.88rem; /* Трохи збільшено розмір */
             color: var(--text-muted);
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
-        /* Компактні строгі кнопки */
+        /* Кнопки */
         .action-btn {
             background: var(--btn-bg);
-            color: #e2e8f0;
-            font-size: 0.75rem;
-            font-weight: 500;
-            padding: 5px 12px;
-            border-radius: 6px;
+            color: #f1f5f9;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 8px;
             border: 1px solid var(--btn-border);
             cursor: pointer;
             transition: all 0.2s ease;
@@ -215,13 +221,13 @@
             color: #ffffff;
         }
 
-        /* SEO-блок у самому низу сторінки */
+        /* SEO-блок */
         .seo-footer {
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 70px;
+            padding-top: 35px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
             color: var(--text-muted);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             line-height: 1.6;
         }
 
@@ -232,22 +238,23 @@
             font-weight: 600;
         }
 
-        .seo-footer h2 { font-size: 1.2rem; margin-top: 15px; }
-        .seo-footer h3 { font-size: 1rem; margin-top: 20px; }
+        .seo-footer h2 { font-size: 1.35rem; margin-top: 15px; }
+        .seo-footer h3 { font-size: 1.1rem; margin-top: 20px; }
 
         .seo-footer p {
-            margin-bottom: 14px;
+            margin-bottom: 16px;
             text-align: justify;
         }
 
         @media (max-width: 768px) {
             .assets-grid {
                 grid-template-columns: 1fr;
-                gap: 8px;
+                gap: 10px;
             }
             body { padding: 25px 12px; }
-            header h1 { font-size: 2rem; }
-            .category-title { font-size: 1.25rem; }
+            header h1 { font-size: 2.2rem; }
+            .category-title { font-size: 1.35rem; }
+            .asset-name { font-size: 1.2rem; }
         }
     </style>
 </head>
