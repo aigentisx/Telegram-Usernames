@@ -14,17 +14,15 @@
         :root {
             --bg-color: #070a13;
             --card-bg: rgba(15, 23, 42, 0.45);
-            --card-border: rgba(255, 255, 255, 0.08);
+            --card-border: rgba(255, 255, 255, 0.06);
             --text-main: #ffffff;
             --text-muted: #94a3b8;
             --accent-blue: #38bdf8;
             --fragment-blue: #007aff;
             --btn-bg: rgba(255, 255, 255, 0.04);
-            --btn-border: rgba(255, 255, 255, 0.12);
+            --btn-border: rgba(255, 255, 255, 0.1);
             
-            /* Спеціальні кольори для ТОП блоку */
-            --top-card-bg: rgba(20, 30, 55, 0.6);
-            --top-border: rgba(234, 179, 8, 0.25);
+            --top-card-bg: rgba(20, 30, 55, 0.4);
             --gold-accent: #eab308;
         }
 
@@ -40,35 +38,35 @@
             background-color: var(--bg-color);
             color: var(--text-main);
             font-family: 'Inter', sans-serif;
-            line-height: 1.5;
-            padding: 40px 20px;
-            background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.05) 0%, transparent 50%);
+            line-height: 1.4;
+            padding: 30px 20px;
+            background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.03) 0%, transparent 50%);
             background-attachment: fixed;
         }
 
         .container {
-            max-width: 1050px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         header {
             text-align: center;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
         header h1 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             font-weight: 700;
             letter-spacing: -0.03em;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             color: #ffffff;
         }
 
         .subtitle {
             color: var(--accent-blue);
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.12em;
             font-weight: 500;
@@ -78,26 +76,26 @@
         .contacts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 12px;
-            margin-bottom: 40px;
+            gap: 10px;
+            margin-bottom: 35px;
         }
 
         .contact-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            padding: 14px 18px;
-            border-radius: 12px;
+            padding: 12px 16px;
+            border-radius: 6px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             text-decoration: none;
             color: var(--text-main);
-            transition: all 0.2s ease;
+            transition: all 0.15s ease;
         }
 
         .contact-card:hover {
-            border-color: rgba(56, 189, 248, 0.3);
-            background: rgba(15, 23, 42, 0.7);
+            border-color: rgba(56, 189, 248, 0.25);
+            background: rgba(15, 23, 42, 0.6);
         }
 
         .contact-icon {
@@ -107,13 +105,13 @@
         }
 
         .contact-icon svg {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             fill: currentColor;
         }
 
         .contact-info .label {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.05em;
@@ -121,23 +119,23 @@
 
         .contact-info .value {
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         /* Категорії */
         .category-section {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .category-title {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             letter-spacing: -0.02em;
         }
 
@@ -145,27 +143,27 @@
             content: '';
             flex: 1;
             height: 1px;
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent);
         }
 
-        /* Ексклюзивний блок ТОП-10 */
+        /* Блок ТОП-10 */
         .top-section {
-            background: radial-gradient(ellipse at top right, rgba(234, 179, 8, 0.03), transparent 60%);
-            border: 1px solid rgba(234, 179, 8, 0.12);
-            padding: 25px;
-            border-radius: 16px;
-            margin-bottom: 50px;
+            border: 1px solid var(--card-border);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 40px;
+            background: rgba(15, 23, 42, 0.2);
         }
 
         .top-title {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.7rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: var(--gold-accent);
-            margin-bottom: 22px;
+            margin-bottom: 18px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             letter-spacing: -0.02em;
         }
 
@@ -173,14 +171,14 @@
             content: '';
             flex: 1;
             height: 1px;
-            background: linear-gradient(90deg, rgba(234, 179, 8, 0.2), transparent);
+            background: linear-gradient(90deg, rgba(234, 179, 8, 0.15), transparent);
         }
 
-        /* Сітки для елементів */
+        /* Сітки елементів на 3 колонки */
         .assets-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 14px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
         }
 
         .asset-item {
@@ -191,58 +189,45 @@
         .asset-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 18px 20px;
+            border-radius: 6px;
+            padding: 14px 16px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 100%;
-            gap: 12px;
-            transition: all 0.2s ease;
+            gap: 8px;
+            transition: all 0.15s ease;
         }
 
-        /* Стилі карток для ТОП блоку */
+        /* ТОП картки */
         .top-card {
             background: var(--top-card-bg);
-            border: 1px solid var(--top-border);
-            padding: 20px 22px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(234, 179, 8, 0.12);
         }
 
         .asset-item:hover .asset-card {
-            border-color: rgba(56, 189, 248, 0.3);
-            background: rgba(15, 23, 42, 0.65);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border-color: rgba(56, 189, 248, 0.25);
+            background: rgba(15, 23, 42, 0.6);
         }
 
-        /* Ховер для ТОП карток */
         .asset-item:hover .top-card {
-            border-color: rgba(234, 179, 8, 0.5);
-            background: rgba(20, 30, 55, 0.85);
-            box-shadow: 0 4px 25px rgba(234, 179, 8, 0.08);
+            border-color: rgba(234, 179, 8, 0.35);
+            background: rgba(20, 30, 55, 0.65);
         }
 
         .asset-main {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
-        /* Шрифти юзернеймів (Великі та чіткі) */
         .asset-name {
             font-family: 'Inter', sans-serif;
-            font-size: 1.35rem; 
+            font-size: 1.2rem; 
             font-weight: 700;   
             color: #ffffff;
             letter-spacing: -0.02em;
-            text-shadow: none;  
-        }
-
-        /* Ще більший шрифт для ТОП-10 */
-        .top-card .asset-name {
-            font-size: 1.5rem;
-            color: #ffffff;
         }
 
         .asset-item:hover .asset-name {
@@ -254,41 +239,39 @@
         }
 
         .asset-desc {
-            font-size: 0.88rem; 
+            font-size: 0.82rem; 
             color: var(--text-muted);
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
-        /* Кнопки та бейджі */
         .btn-container {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .action-btn {
             background: var(--btn-bg);
             color: #f1f5f9;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
-            padding: 6px 14px;
-            border-radius: 8px;
+            padding: 4px 10px;
+            border-radius: 4px;
             border: 1px solid var(--btn-border);
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.15s ease;
             white-space: nowrap;
         }
 
         .badge-top {
-            background: rgba(234, 179, 8, 0.1);
+            background: rgba(234, 179, 8, 0.08);
             color: var(--gold-accent);
-            border: 1px solid rgba(234, 179, 8, 0.2);
-            font-size: 0.72rem;
+            border: 1px solid rgba(234, 179, 8, 0.15);
+            font-size: 0.68rem;
             font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 6px;
+            padding: 2px 6px;
+            border-radius: 4px;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
         }
 
         .asset-item:hover .action-btn {
@@ -305,40 +288,45 @@
 
         /* SEO-блок */
         .seo-footer {
-            margin-top: 70px;
-            padding-top: 35px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
             color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.6;
+            font-size: 0.85rem;
+            line-height: 1.5;
         }
 
         .seo-footer h2, .seo-footer h3 {
             font-family: 'Space Grotesk', sans-serif;
             color: #ffffff;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             font-weight: 600;
         }
 
-        .seo-footer h2 { font-size: 1.35rem; margin-top: 15px; }
-        .seo-footer h3 { font-size: 1.1rem; margin-top: 20px; }
+        .seo-footer h2 { font-size: 1.2rem; margin-top: 12px; }
+        .seo-footer h3 { font-size: 1rem; margin-top: 16px; }
 
         .seo-footer p {
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             text-align: justify;
         }
 
-        @media (max-width: 768px) {
+        /* Адаптивність */
+        @media (max-width: 992px) {
+            .assets-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
             .assets-grid {
                 grid-template-columns: 1fr;
-                gap: 10px;
+                gap: 8px;
             }
-            body { padding: 25px 12px; }
-            header h1 { font-size: 2.2rem; }
-            .category-title, .top-title { font-size: 1.35rem; }
-            .asset-name { font-size: 1.2rem; }
-            .top-card .asset-name { font-size: 1.3rem; }
-            .top-section { padding: 15px; }
+            body { padding: 20px 10px; }
+            header h1 { font-size: 2rem; }
+            .category-title, .top-title { font-size: 1.2rem; }
+            .asset-name { font-size: 1.1rem; }
         }
     </style>
 </head>
@@ -351,7 +339,6 @@
         <div class="subtitle">Premium Digital Assets & Identities</div>
     </header>
 
-    <!-- Контакти -->
     <div class="contacts-grid">
         <a href="https://t.me/Aigentis" target="_blank" class="contact-card">
             <div class="contact-icon">
@@ -382,7 +369,6 @@
         </a>
     </div>
 
-    <!-- ВИТРИНА ТОП-10 ИМЕН -->
     <div class="top-section">
         <div class="top-title">⭐️ Featured Premium Assets (TOP 10)</div>
         <div class="assets-grid">
@@ -399,7 +385,6 @@
         </div>
     </div>
 
-    <!-- 1. AI, TECH & QUANTUM NEXUS -->
     <div class="category-section">
         <div class="category-title">🤖 AI, Quantum & Tech Frameworks</div>
         <div class="assets-grid">
@@ -416,7 +401,7 @@
             <a href="https://fragment.com/username/nexatix" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@nexatix</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Modern automation, SaaS infrastructure, or data processing tech platform name.</div></div></a>
             <a href="https://fragment.com/username/iqonex" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@iqonex</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Smart tech integrations, corporate software suites, or custom API solutions.</div></div></a>
             <a href="https://fragment.com/username/neuroqon" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@neuroqon</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Neural networks, AI computing pools, LLM hubs, or cognitive software suites.</div></div></a>
-            <a href="https://fragment.com/username/neuraris" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@neuraris</span><button class="asset-desc">Premium biotech, neurological research frameworks, or cognitive AI services.</div></div></a>
+            <a href="https://fragment.com/username/neuraris" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@neuraris</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Premium biotech, neurological research frameworks, or cognitive AI services.</div></div></a>
             <a href="https://fragment.com/username/infochatgpt" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@infochatgpt</span><button class="action-btn">Fragment</button></div><div class="asset-desc">High-traffic informational directory, news hub, or guide system for AI prompts.</div></div></a>
             <a href="https://fragment.com/username/uffox" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@uffox</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Short, memorable global tech identity for developer environments and dev tools.</div></div></a>
             <a href="https://fragment.com/username/smsql" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@smsql</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Database tech handle tailored for data brokers, alert software, or server tools.</div></div></a>
@@ -425,7 +410,6 @@
         </div>
     </div>
 
-    <!-- 2. FINTECH & NEO-BANKING -->
     <div class="category-section">
         <div class="category-title">🏦 Institutional Fintech & Neo-Banking</div>
         <div class="assets-grid">
@@ -450,10 +434,10 @@
             <a href="https://fragment.com/username/bizmon" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@bizmon</span><button class="action-btn">Fragment</button></div><div class="asset-desc">B2B financial trackers, monitoring corporate capital, or treasury software.</div></div></a>
             <a href="https://fragment.com/username/newsfinan" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@newsfinan</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Global economic calendars, trade signals, or investment newsletters.</div></div></a>
             <a href="https://fragment.com/username/bilansowy" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@bilansowy</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Accounting services, corporate balance sheet calculators, or regional financial audits.</div></div></a>
+            <a href="https://fragment.com/username/paymaniya" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@paymaniya</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Sleek, brandable processing identity or mobile checkout layer for modern Web3 commerce.</div></div></a>
         </div>
     </div>
 
-    <!-- 3. TON & QUANT WEB3 -->
     <div class="category-section">
         <div class="category-title">💎 TON Ledger & Quant Capital</div>
         <div class="assets-grid">
@@ -472,7 +456,6 @@
         </div>
     </div>
 
-    <!-- 4. CRYPTO LIQUIDITY & SWAPS -->
     <div class="category-section">
         <div class="category-title">📈 Crypto Pools, Trading & Swap Indices</div>
         <div class="assets-grid">
@@ -500,7 +483,6 @@
         </div>
     </div>
 
-    <!-- 5. QIAN CAPITAL SERIES -->
     <div class="category-section">
         <div class="category-title">🧧 Qian Capital & Eastern Venture Layers</div>
         <div class="assets-grid">
@@ -513,7 +495,6 @@
         </div>
     </div>
 
-    <!-- 6. CASINO & HIGH-TRAFFIC ENTERTAINMENT -->
     <div class="category-section">
         <div class="category-title">🎰 Casino, Gaming & Entertainment Hubs</div>
         <div class="assets-grid">
@@ -529,7 +510,6 @@
         </div>
     </div>
 
-    <!-- 7. GLOBAL GEOLOCATION, MARKETING & E-COMMERCE -->
     <div class="category-section">
         <div class="category-title">🌐 Geolocation, SEO & Commercial Assets</div>
         <div class="assets-grid">
@@ -572,7 +552,6 @@
         </div>
     </div>
 
-    <!-- SEO FOOTER BLOCK -->
     <div class="seo-footer">
         <h2>Premium Digital Identity & Web3 Asset Ecosystem</h2>
         <p>In the rapidly evolving landscape of decentralized technology, establishing a strong digital presence is paramount. This portfolio showcases a curated collection of high-value Telegram usernames and Web3 brand frameworks tailored for modern enterprises, tech visionaries, and cryptocurrency ventures. Every premium asset listed represents a strategic anchor point within the TON blockchain ecosystem, ensuring uncompromised security, absolute ownership, and smooth peer-to-peer transfers verified directly via the decentralized Fragment ledger.</p>
