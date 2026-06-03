@@ -21,18 +21,10 @@
             --fragment-blue: #007aff;
             --btn-bg: rgba(255, 255, 255, 0.04);
             --btn-border: rgba(255, 255, 255, 0.1);
-            
-            --top-card-bg: rgba(20, 30, 55, 0.4);
             --gold-accent: #eab308;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
 
         .gold-banner {
             background: linear-gradient(90deg, #1e1b4b 0%, #2e2204 50%, #1e1b4b 100%);
@@ -42,232 +34,59 @@
             padding: 10px 20px;
             font-size: 0.88rem;
             font-weight: 500;
-            letter-spacing: 0.02em;
         }
         
-        .gold-banner strong {
-            color: var(--gold-accent);
-            font-weight: 700;
-        }
+        .gold-banner strong { color: var(--gold-accent); font-weight: 700; }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
             font-family: 'Inter', sans-serif;
             line-height: 1.4;
-            padding: 0;
             background-image: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.03) 0%, transparent 50%);
             background-attachment: fixed;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 30px 20px; }
+        header { text-align: center; margin-bottom: 30px; }
+        header h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 4px; }
+        .subtitle { color: var(--accent-blue); font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 500; }
 
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+        .contacts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin-bottom: 35px; }
+        .contact-card { background: var(--card-bg); border: 1px solid var(--card-border); padding: 12px 16px; border-radius: 6px; display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-main); transition: all 0.15s ease; }
+        .contact-card:hover { border-color: rgba(56, 189, 248, 0.25); background: rgba(15, 23, 42, 0.6); }
+        .contact-icon { color: var(--accent-blue); display: flex; align-items: center; }
+        .contact-icon svg { width: 18px; height: 18px; fill: currentColor; }
+        .contact-info .label { font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; }
+        .contact-info .value { font-weight: 600; font-size: 0.9rem; }
 
-        header h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 4px;
-            color: #ffffff;
-        }
+        .category-section { margin-bottom: 40px; }
+        .category-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+        .category-title::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent); }
 
-        .subtitle {
-            color: var(--accent-blue);
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            font-weight: 500;
-        }
+        .assets-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        .asset-item { text-decoration: none; color: inherit; }
+        .asset-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 6px; padding: 14px 16px; display: flex; flex-direction: column; justify-content: space-between; height: 100%; gap: 8px; transition: all 0.15s ease; }
+        .asset-item:hover .asset-card { border-color: rgba(56, 189, 248, 0.25); background: rgba(15, 23, 42, 0.6); }
+        .asset-main { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+        .asset-name { font-size: 1.15rem; font-weight: 700; color: #ffffff; letter-spacing: -0.02em; }
+        .asset-item:hover .asset-name { color: var(--accent-blue); }
+        .asset-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.4; }
+        .action-btn { background: var(--btn-bg); color: #f1f5f9; font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 4px; border: 1px solid var(--btn-border); cursor: pointer; transition: all 0.15s ease; }
+        .asset-item:hover .action-btn { background: var(--fragment-blue); border-color: var(--fragment-blue); color: #ffffff; }
 
-        .contacts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 10px;
-            margin-bottom: 35px;
-        }
+        /* Спеціальний стиль для ТОП-ів */
+        .top-tier .asset-card { border-color: rgba(234, 179, 8, 0.2); background: linear-gradient(135deg, rgba(30, 27, 75, 0.4) 0%, rgba(15, 23, 42, 0.45) 100%); }
+        .top-tier .asset-name { color: var(--gold-accent); }
+        .top-tier .asset-item:hover .asset-card { border-color: var(--gold-accent); }
 
-        .contact-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            padding: 12px 16px;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--text-main);
-            transition: all 0.15s ease;
-        }
+        .seo-footer { margin-top: 50px; padding-top: 25px; border-top: 1px solid rgba(255, 255, 255, 0.06); color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; }
+        .seo-footer h2 { font-size: 1.3rem; margin-top: 12px; color: var(--accent-blue); font-family: 'Space Grotesk', sans-serif; }
+        .seo-footer h3 { font-size: 1.1rem; margin-top: 20px; color: #ffffff; font-family: 'Space Grotesk', sans-serif; }
+        .seo-footer p { margin-bottom: 14px; text-align: justify; }
 
-        .contact-card:hover {
-            border-color: rgba(56, 189, 248, 0.25);
-            background: rgba(15, 23, 42, 0.6);
-        }
-
-        .contact-icon {
-            color: var(--accent-blue);
-            display: flex;
-            align-items: center;
-        }
-
-        .contact-icon svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
-        }
-
-        .contact-info .label {
-            font-size: 0.65rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .contact-info .value {
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .category-section {
-            margin-bottom: 40px;
-        }
-
-        .category-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            letter-spacing: -0.02em;
-        }
-
-        .category-title::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent);
-        }
-
-        .assets-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-        }
-
-        .asset-item {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .asset-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 6px;
-            padding: 14px 16px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            gap: 8px;
-            transition: all 0.15s ease;
-        }
-
-        .asset-item:hover .asset-card {
-            border-color: rgba(56, 189, 248, 0.25);
-            background: rgba(15, 23, 42, 0.6);
-        }
-
-        .asset-main {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .asset-name {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.15rem; 
-            font-weight: 700;   
-            color: #ffffff;
-            letter-spacing: -0.02em;
-        }
-
-        .asset-item:hover .asset-name {
-            color: var(--accent-blue);
-        }
-
-        .asset-desc {
-            font-size: 0.82rem; 
-            color: var(--text-muted);
-            line-height: 1.4;
-        }
-
-        .action-btn {
-            background: var(--btn-bg);
-            color: #f1f5f9;
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 4px;
-            border: 1px solid var(--btn-border);
-            cursor: pointer;
-            transition: all 0.15s ease;
-            white-space: nowrap;
-        }
-
-        .asset-item:hover .action-btn {
-            background: var(--fragment-blue);
-            border-color: var(--fragment-blue);
-            color: #ffffff;
-        }
-
-        .seo-footer {
-            margin-top: 50px;
-            padding-top: 25px;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            line-height: 1.6;
-        }
-
-        .seo-footer h2, .seo-footer h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            color: #ffffff;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .seo-footer h2 { font-size: 1.3rem; margin-top: 12px; color: var(--accent-blue); }
-        .seo-footer h3 { font-size: 1.1rem; margin-top: 20px; }
-
-        .seo-footer p {
-            margin-bottom: 14px;
-            text-align: justify;
-        }
-
-        @media (max-width: 992px) {
-            .assets-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media (max-width: 640px) {
-            .assets-grid { grid-template-columns: 1fr; gap: 8px; }
-            header h1 { font-size: 2rem; }
-            .category-title { font-size: 1.2rem; }
-            .asset-name { font-size: 1.1rem; }
-        }
+        @media (max-width: 992px) { .assets-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 640px) { .assets-grid { grid-template-columns: 1fr; gap: 8px; } header h1 { font-size: 2rem; } }
     </style>
 </head>
 <body>
@@ -285,39 +104,40 @@
 
     <div class="contacts-grid">
         <a href="https://t.me/Aigentis" target="_blank" class="contact-card">
-            <div class="contact-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.53-1.39.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.46-.42-1.4-.88.03-.24.37-.49 1.03-.74 4.04-1.76 6.74-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.13-.03.19z"/></svg>
-            </div>
-            <div class="contact-info">
-                <div class="label">Telegram</div>
-                <div class="value">@Aigentis</div>
-            </div>
+            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.53-1.39.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.46-.42-1.4-.88.03-.24.37-.49 1.03-.74 4.04-1.76 6.74-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.13-.03.19z"/></svg></div>
+            <div class="contact-info"><div class="label">Telegram</div><div class="value">@Aigentis</div></div>
         </a>
         <a href="https://t.me/namesauction" target="_blank" class="contact-card">
-            <div class="contact-icon">
-                <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
-            </div>
-            <div class="contact-info">
-                <div class="label">Official Hub</div>
-                <div class="value">@namesauction</div>
-            </div>
+            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg></div>
+            <div class="contact-info"><div class="label">Official Hub</div><div class="value">@namesauction</div></div>
         </a>
         <a href="https://x.com/aigentisx" target="_blank" class="contact-card">
-            <div class="contact-icon">
-                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </div>
-            <div class="contact-info">
-                <div class="label">X (Twitter)</div>
-                <div class="value">@aigentisx</div>
-            </div>
+            <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
+            <div class="contact-info"><div class="label">X (Twitter)</div><div class="value">@aigentisx</div></div>
         </a>
     </div>
 
-    <!-- КАТЕГОРІЯ 1 -->
-    <div class="category-section">
-        <div class="category-title">🌐 Digital Identity & Tech Premium</div>
+    <!-- ⭐ КАТЕГОРІЯ ТОП: Твої головні 10 імен -->
+    <div class="category-section top-tier">
+        <div class="category-title">⭐ TOP Tier Elite Premium Handles</div>
         <div class="assets-grid">
-            <a href="https://fragment.com/username/aigentis" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@aigentis</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Premium identity for corporate Web3 ecosystems, digital agency projects or secure setups.</div></div></a>
+            <a href="https://fragment.com/username/casino1club" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@casino1club</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Elite tier flagship gaming hub asset optimized for high capacity global web platforms.</div></div></a>
+            <a href="https://fragment.com/username/coinslim" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@coinslim</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Sleek, clean premium tech framework asset optimized for minimalist digital app wallets.</div></div></a>
+            <a href="https://fragment.com/username/dubaimebel" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@dubaimebel</span><button class="action-btn">Fragment</button></div><div class="asset-desc">High-value commercial regional keyword targeting premium furniture trade networks in UAE.</div></div></a>
+            <a href="https://fragment.com/username/qiancapital" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qiancapital</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Institutional venture matrix and finance hub optimized for global high-volume investments.</div></div></a>
+            <a href="https://fragment.com/username/aigentis" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@aigentis</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Primary premium corporate identity for Web3 ecosystems, digital agencies or secure setups.</div></div></a>
+            <a href="https://fragment.com/username/namesauction" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@namesauction</span><button class="action-btn">Fragment</button></div><div class="asset-desc">The ultimate organic marketing hub asset tailored for listing high-tier accounts and trades.</div></div></a>
+            <a href="https://fragment.com/username/finton" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@finton</span><button class="action-btn">Fragment</button></div><div class="asset-desc">The master Finance TON asset, tailored perfectly for native app wallet models and dApps.</div></div></a>
+            <a href="https://fragment.com/username/casinoseo" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@casinoseo</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Highly targeted high-traffic asset for gaming traffic optimizer tools and SEO analytics.</div></div></a>
+            <a href="https://fragment.com/username/arabpay" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@arabpay</span><button class="action-btn">Fragment</button></div><div class="asset-desc">MENA region gateway payment rails built for massive scale active e-commerce checkouts.</div></div></a>
+            <a href="https://fragment.com/username/dubaiepay" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@dubaiepay</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Premium payment processor focused on Dubai and UAE commercial digital checkout platforms.</div></div></a>
+        </div>
+    </div>
+
+    <!-- КАТЕГОРІЯ 1: Web3, Onix & Corporate Identity -->
+    <div class="category-section">
+        <div class="category-title">🌐 Web3, Onix & Corporate Identity</div>
+        <div class="assets-grid">
             <a href="https://fragment.com/username/aurelionix" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@aurelionix</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Elite technology domain concept tailored for corporate platforms and luxury services.</div></div></a>
             <a href="https://fragment.com/username/dubaionix" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@dubaionix</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Regional high-tech keyword linking innovation platforms with the MENA tech hub market.</div></div></a>
             <a href="https://fragment.com/username/emirateon" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@emirateon</span><button class="action-btn">Fragment</button></div><div class="asset-desc">High-value ecosystem naming optimized for premium digital regional asset models.</div></div></a>
@@ -335,7 +155,6 @@
             <a href="https://fragment.com/username/iqonex" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@iqonex</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Intelligent custom software environments and multi-tier tech integrations.</div></div></a>
             <a href="https://fragment.com/username/neuroqon" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@neuroqon</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Neural computing frameworks, AI modeling clusters and custom analytical tools.</div></div></a>
             <a href="https://fragment.com/username/unitonix" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@unitonix</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Ecosystem platform model built for high-performance cross-chain software.</div></div></a>
-            <a href="https://fragment.com/username/title_vielit" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@title_vielit</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Sleek corporate naming alternative built for premium digital platform components.</div></div></a>
             <a href="https://fragment.com/username/vielit" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@vielit</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Abstract highly brandable premium handle for modern tech labs and data suites.</div></div></a>
             <a href="https://fragment.com/username/vipqnt" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@vipqnt</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Elite quant analytics and premium trading infrastructure shortcut identification.</div></div></a>
             <a href="https://fragment.com/username/vultox" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@vultox</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Short impactful developer tool core name optimized for high-security environments.</div></div></a>
@@ -343,9 +162,9 @@
         </div>
     </div>
 
-    <!-- КАТЕГОРІЯ 2 -->
+    <!-- КАТЕГОРІЯ 2: Media, SEO & Traffic Platforms -->
     <div class="category-section">
-        <div class="category-title">📊 Media, SEO, Traffic & Directories</div>
+        <div class="category-title">📊 Media, SEO & Traffic Platforms</div>
         <div class="assets-grid">
             <a href="https://fragment.com/username/auctionnames" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@auctionnames</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Organic high-volume directory key targeting domain and premium account auctions.</div></div></a>
             <a href="https://fragment.com/username/bankstep" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@bankstep</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Step investing setups, microfinance tracking blogs or modern digital guides.</div></div></a>
@@ -353,177 +172,16 @@
             <a href="https://fragment.com/username/hotelsnetwork" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@hotelsnetwork</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Global target B2B framework built for massive accommodation aggregators.</div></div></a>
             <a href="https://fragment.com/username/ketplus" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@ketplus</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Universal media platform concept or specialized tool network configuration.</div></div></a>
             <a href="https://fragment.com/username/monsterremonta" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@monsterremonta</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Commercial portal target optimized for renovation agencies and services.</div></div></a>
-            <a href="https://fragment.com/username/namesauction" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@namesauction</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Premium marketing hub asset tailored for listing high-tier accounts.</div></div></a>
             <a href="https://fragment.com/username/ogogonews" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@ogogonews</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Viral entertainment media framework or rapid direct news notification feed.</div></div></a>
             <a href="https://fragment.com/username/seoopen" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@seoopen</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Open source marketing instrumentation, open directories and link indexing.</div></div></a>
             <a href="https://fragment.com/username/swapbuy" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@swapbuy</span><button class="action-btn">Fragment</button></div><div class="asset-desc">E-commerce commercial hub designed for automated items or peer trade setups.</div></div></a>
             <a href="https://fragment.com/username/uaetodays" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@uaetodays</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Regional news channel framework targeting active UAE business updates.</div></div></a>
-            <a href="https://fragment.com/username/casinoseo" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@casinoseo</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Highly targeted commercial asset for gaming traffic optimizer tools and analytics.</div></div></a>
             <a href="https://fragment.com/username/keelpno" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@keelpno</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Unique short brandable word suitable for modern tech projects or application names.</div></div></a>
             <a href="https://fragment.com/username/seoelit" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@seoelit</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Premium level marketing strategies, high tier search auditing agency hub.</div></div></a>
             <a href="https://fragment.com/username/seominute" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@seominute</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Express digital tracking platform, rapid marketing analytics and tips feed.</div></div></a>
             <a href="https://fragment.com/username/seouae" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@seouae</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Geolocated target agency handle focusing on Dubai marketing optimization.</div></div></a>
-        </div>
-    </div>
-
-    <!-- КАТЕГОРІЯ 3 -->
-    <div class="category-section">
-        <div class="category-title">⚡ Crypto, AI & High-Tech Brands</div>
-        <div class="assets-grid">
-            <a href="https://fragment.com/username/aiquantium" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@aiquantium</span><button class="action-btn">Fragment</button></div><div class="asset-desc">High-tier data systems combining modern AI systems with quant analysis layers.</div></div></a>
-            <a href="https://fragment.com/username/coin_d" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@coin_d</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Ultra short compact crypto shortcut designed for index indicators or data bots.</div></div></a>
-            <a href="https://fragment.com/username/cryptoscaming" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@cryptoscaming</span><button class="action-btn">Fragment</button></div><div class="asset-desc">High-organic search term for cybersecurity blogs, anti-fraud units and audit indices.</div></div></a>
-            <a href="https://fragment.com/username/paymaniya" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@paymaniya</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Sleek global processing identity designed for Web3 online checkout layers.</div></div></a>
-            <a href="https://fragment.com/username/topcryptogame" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@topcryptogame</span><button class="action-btn">Fragment</button></div><div class="asset-desc">High traffic organic keyword built for GameFi aggregators and play-to-earn lists.</div></div></a>
-            <a href="https://fragment.com/username/yooomoney" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@yooomoney</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Memorable mobile user wallet concept for simple peer-to-peer online checkout.</div></div></a>
-            <a href="https://fragment.com/username/aigentum" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@aigentum</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Scientific brand matrix connecting automated software setups with node frameworks.</div></div></a>
-            <a href="https://fragment.com/username/aigentus" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@aigentus</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Authoritative corporate framework built for multi-model AI system layers.</div></div></a>
-            <a href="https://fragment.com/username/copsto" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@copsto</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Short catchy brand structure optimized for trading tools or specialized applications.</div></div></a>
-            <a href="https://fragment.com/username/cryptokross" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@cryptokross</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Cross-chain payment gateway network link or multi-asset trading solution.</div></div></a>
-            <a href="https://fragment.com/username/cryptotin" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@cryptotin</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Micro-transaction application setup, compact digital cards or asset dashboards.</div></div></a>
-            <a href="https://fragment.com/username/neuraris" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@neuraris</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Premium biotech, neurological research or cognitive custom AI tools workspace.</div></div></a>
-            <a href="https://fragment.com/username/uccrypto" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@uccrypto</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Universal crypto center framework suitable for exchange pools and tracking bots.</div></div></a>
-            <a href="https://fragment.com/username/cqcrypto" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@cqcrypto</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Short 8-character tech moniker optimized for decentralized finance platforms.</div></div></a>
-            <a href="https://fragment.com/username/crypto1click" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@crypto1click</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Instant cryptocurrency purchase app, express payment modules or data layers.</div></div></a>
-            <a href="https://fragment.com/username/cryptoburns" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@cryptoburns</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Token tracking network, deflationary asset statistics dashboard or analytics.</div></div></a>
-            <a href="https://fragment.com/username/tonmercuryo" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@tonmercuryo</span><button class="action-btn">Fragment</button></div><div class="asset-desc">TON ledger native processing concept linking ecosystem assets smoothly.</div></div></a>
-            <a href="https://fragment.com/username/cryptotia" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@cryptotia</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Informational catalog framework or news agency focusing on market trends.</div></div></a>
-            <a href="https://fragment.com/username/coinslim" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@coinslim</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Sleek clean framework asset optimized for minimalist digital app wallets.</div></div></a>
-            <a href="https://fragment.com/username/coinuah" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@coinuah</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Direct national search matching localized fiat fiat rails with digital setups.</div></div></a>
-            <a href="https://fragment.com/username/crypto1data" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@crypto1data</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Analytical asset focused on providing clean blockchain metrics data streams.</div></div></a>
-            <a href="https://fragment.com/username/crypto1online" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@crypto1online</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Live economic monitoring panels and centralized digital tech resources.</div></div></a>
-            <a href="https://fragment.com/username/cryptopricetoday" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@cryptopricetoday</span><button class="action-btn">Fragment</button></div><div class="asset-desc">High volume organic tracker key built for real-time asset pricing feeds.</div></div></a>
-        </div>
-    </div>
-
-    <!-- КАТЕГОРІЯ 4 -->
-    <div class="category-section">
-        <div class="category-title">🏦 Fintech, Banking & Commerce</div>
-        <div class="assets-grid">
-            <a href="https://fragment.com/username/rtvip" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@rtvip</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Ultra-short luxury access configuration for elite private corporate networks.</div></div></a>
-            <a href="https://fragment.com/username/ufbank" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@ufbank</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Short 6-letter fintech layout optimized for global merchant processing options.</div></div></a>
-            <a href="https://fragment.com/username/bankstartup" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@bankstartup</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Fintech core key ideal for accelerator platforms or digital neo-banks.</div></div></a>
-            <a href="https://fragment.com/username/bilansowy" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@bilansowy</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Regional financial accounting service system or balance verification tools.</div></div></a>
-            <a href="https://fragment.com/username/elitbank" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@elitbank</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Private premium banking suite asset designed for digital high-end investments.</div></div></a>
-            <a href="https://fragment.com/username/imagesbank" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@imagesbank</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Stock illustration catalog platform, asset vault or image broker structure.</div></div></a>
-            <a href="https://fragment.com/username/inwestowac" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@inwestowac</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Organic action keyword ("To Invest") perfect for asset educational frameworks.</div></div></a>
-            <a href="https://fragment.com/username/ioopen" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@ioopen</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Open data infrastructure, public API document keys or cloud integrations.</div></div></a>
-            <a href="https://fragment.com/username/lvivbank" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@lvivbank</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Geolocated finance network anchor targeting regional digital solutions.</div></div></a>
-            <a href="https://fragment.com/username/smsql" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@smsql</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Database technical utility shortcut optimized for automated server scripting.</div></div></a>
-            <a href="https://fragment.com/username/uffox" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@uffox</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Short memorable tech label matching digital ecosystems or modern apps.</div></div></a>
-            <a href="https://fragment.com/username/creditclick" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@creditclick</span><button class="action-btn">Fragment</button></div><div class="asset-desc">High conversion transactional key for online lines of microfinance credit.</div></div></a>
-            <a href="https://fragment.com/username/hobank" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@hobank</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Ultra-short neo-banking layer designed for quick crypto processing portals.</div></div></a>
-            <a href="https://fragment.com/username/iqfund" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@iqfund</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Smart capital allocation network, hedge analytics or investment boards.</div></div></a>
-            <a href="https://fragment.com/username/arabpay" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@arabpay</span><button class="action-btn">Fragment</button></div><div class="asset-desc">MENA processing gateway rails built for active e-commerce checkouts.</div></div></a>
-            <a href="https://fragment.com/username/bankkontakt" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@bankkontakt</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Support matrix link for interactive financial assistant setups and bots.</div></div></a>
-            <a href="https://fragment.com/username/cecbank" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@cecbank</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Corporate financial services model designed for global transaction processing.</div></div></a>
-            <a href="https://fragment.com/username/dubaiepay" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@dubaiepay</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Premium payment processor focused on UAE commercial digital checkout platforms.</div></div></a>
-            <a href="https://fragment.com/username/esklep" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@esklep</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Organic high-volume regional market term targeting active e-commerce shops.</div></div></a>
-            <a href="https://fragment.com/username/kantorpolska" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@kantorpolska</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Exchange directory framework targeting active continental cash setups.</div></div></a>
-            <a href="https://fragment.com/username/kantorwalut" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@kantorwalut</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Primary commercial Polish term for online currency exchange portals.</div></div></a>
-            <a href="https://fragment.com/username/obanku" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@obanku</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Informational economic review hub or investment strategy review index.</div></div></a>
-            <a href="https://fragment.com/username/bizmon" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@bizmon</span><button class="action-btn">Fragment</button></div><div class="asset-desc">B2B capital monitoring setups or corporate finance treasury system frameworks.</div></div></a>
-            <a href="https://fragment.com/username/finton" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@finton</span><button class="action-btn">Fragment</button></div><div class="asset-desc">The master Finance TON asset tailored for native app wallet models.</div></div></a>
-            <a href="https://fragment.com/username/newsfinan" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@newsfinan</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Global stock indicators, economic calendars and transaction newsletters.</div></div></a>
-            <a href="https://fragment.com/username/wiseplc" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@wiseplc</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Exact ticker naming match matching international market fintech entities.</div></div></a>
-            <a href="https://fragment.com/username/dubaimebel" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@dubaimebel</span><button class="action-btn">Fragment</button></div><div class="asset-desc">High value commercial regional asset targeting furniture trade networks in UAE.</div></div></a>
-            <a href="https://fragment.com/username/startcms" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@startcms</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Development module platform built for modern headless interface web setups.</div></div></a>
-        </div>
-    </div>
-
-    <!-- КАТЕГОРІЯ 5 -->
-    <div class="category-section">
-        <div class="category-title">🎯 Specialized, Organic & Regional Indices</div>
-        <div class="assets-grid">
             <a href="https://fragment.com/username/auctionames" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@auctionames</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Alternative search asset keyword built for custom platform marketplaces.</div></div></a>
-            <a href="https://fragment.com/username/donateplease" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@donateplease</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Charity organization matrix, tipping service bot hook or fundraiser index.</div></div></a>
-            <a href="https://fragment.com/username/iesuschristus" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@iesuschristus</span><button class="action-btn">Fragment</button></div><div class="asset-desc">High authority historical asset name designed for mass global media tools.</div></div></a>
             <a href="https://fragment.com/username/namessell" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@namessell</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Direct action marketing shortcut for digital account brokerage portals.</div></div></a>
-            <a href="https://fragment.com/username/solveton" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@solveton</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Technical puzzle network, dev tools or automation options within TON framework.</div></div></a>
-            <a href="https://fragment.com/username/szefkuchni" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@szefkuchni</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Organic culinary blog hook ("Chef") optimized for food review modules.</div></div></a>
-            <a href="https://fragment.com/username/aqservice" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@aqservice</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Compact technical support system name or maintenance agency framework.</div></div></a>
-            <a href="https://fragment.com/username/drogogo" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@drogogo</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Memorable travel blog, regional vehicle transport application or logistics hub.</div></div></a>
-            <a href="https://fragment.com/username/edrohobych" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@edrohobych</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Regional community directory framework for interactive city dashboard applications.</div></div></a>
-            <a href="https://fragment.com/username/infochatgpt" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@infochatgpt</span><button class="action-btn">Fragment</button></div><div class="asset-desc">High traffic info center focused on modern AI tools prompt guide tracking.</div></div></a>
-            <a href="https://fragment.com/username/infoufc" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@infoufc</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Organic sports channel portal target built for martial arts tracking feeds.</div></div></a>
-            <a href="https://fragment.com/username/nfticons" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@nfticons</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Visual digital artwork portfolio catalog, collection indicators or asset sets.</div></div></a>
-            <a href="https://fragment.com/username/robotafl" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@robotafl</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Freelance marketplace index link or regional professional search channel.</div></div></a>
-            <a href="https://fragment.com/username/autowybor" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@autowybor</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Automotive marketplace tool, car review aggregator blog or shop asset.</div></div></a>
-            <a href="https://fragment.com/username/edzieci" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@edzieci</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Educational child development framework portal or organic products index.</div></div></a>
-            <a href="https://fragment.com/username/jestpraca" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@jestpraca</span><button class="action-btn">Fragment</button></div><div class="asset-desc">High volume organic job finder directory channel link ("Work Is Here").</div></div></a>
-            <a href="https://fragment.com/username/diamantshop" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@diamantshop</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Luxury commerce boutique interface setup or premium collectibles digital vault.</div></div></a>
+            <a href="https://fragment.com/username/newsfinan" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@newsfinan</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Global stock indicators, economic calendars and transaction newsletters.</div></div></a>
         </div>
     </div>
-
-    <!-- КАТЕГОРІЯ 6 -->
-    <div class="category-section">
-        <div class="category-title">🎯 Gaming, Entertainment & High-Volume Niches</div>
-        <div class="assets-grid">
-            <a href="https://fragment.com/username/casino1club" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@casino1club</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Elite tier gaming hub asset optimized for high capacity web platforms.</div></div></a>
-            <a href="https://fragment.com/username/axcasino" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@axcasino</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Sleek short layout moniker optimized for premium automated games panels.</div></div></a>
-            <a href="https://fragment.com/username/casinosms" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@casinosms</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Transactional verification tool built for rapid interactive platform statistics.</div></div></a>
-            <a href="https://fragment.com/username/soscasino" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@soscasino</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Review portal aggregator platform built for tracking premium digital hubs.</div></div></a>
-            <a href="https://fragment.com/username/crezygames" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@crezygames</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Entertainment viral hub designed for mobile application collections and tests.</div></div></a>
-            <a href="https://fragment.com/username/lovescasino" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@lovescasino</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Community communication network tailored for interactive platform updates.</div></div></a>
-            <a href="https://fragment.com/username/smscasino" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@smscasino</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Automated system notifier link built for modern platform integration setups.</div></div></a>
-            <a href="https://fragment.com/username/casinolu" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@casinolu</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Short impactful platform moniker matching dynamic custom mobile apps.</div></div></a>
-            <a href="https://fragment.com/username/crypto1club" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@crypto1club</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Exclusive community framework designed for alpha groups and token trackers.</div></div></a>
-            <a href="https://fragment.com/username/sexauction" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@sexauction</span><button class="action-btn">Fragment</button></div><div class="asset-desc">High organic tracking keyword suited for specialized entertainment infrastructure.</div></div></a>
-            <a href="https://fragment.com/username/ssexshop" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@ssexshop</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Traffic generation direct keyword for adult commerce platforms and systems.</div></div></a>
-            <a href="https://fragment.com/username/superpopku" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@superpopku</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Viral media platform concept or specialized entertainment community network.</div></div></a>
-            <a href="https://fragment.com/username/ubsex" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@ubsex</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Short abstract brand identity tailored for decentralized streaming services.</div></div></a>
-            <a href="https://fragment.com/username/ufsex" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@ufsex</span><button class="action-btn">Fragment</button></div><div class="asset-desc">High conversion short moniker optimized for online media storage layers.</div></div></a>
-            <a href="https://fragment.com/username/sexinvest" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@sexinvest</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Niche commercial blog structure focusing on adult sector marketing investments.</div></div></a>
-            <a href="https://fragment.com/username/utsex" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@utsex</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Compact generic handle built for private community models or secure spaces.</div></div></a>
-        </div>
-    </div>
-
-    <!-- КАТЕГОРІЯ 7: СЕРІЯ QIAN & MULTI-FINANCE -->
-    <div class="category-section">
-        <div class="category-title">🏮 Qian Capital Frameworks & Financial Layers</div>
-        <div class="assets-grid">
-            <a href="https://fragment.com/username/qiancapital" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qiancapital</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Institutional venture matrix optimized for global high-volume investments.</div></div></a>
-            <a href="https://fragment.com/username/qiancore" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qiancore</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Centralized platform logic module built for algorithmic asset trading systems.</div></div></a>
-            <a href="https://fragment.com/username/qianflow" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qianflow</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Liquidity automation layout designed for tracking real-time crypto transactions.</div></div></a>
-            <a href="https://fragment.com/username/qiannet" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qiannet</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Distributed node network system tailored for secure web data hosting solutions.</div></div></a>
-            <a href="https://fragment.com/username/qiansys" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qiansys</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Corporate operational structure framework built for managing deep asset vaults.</div></div></a>
-            <a href="https://fragment.com/username/qiantech" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qiantech</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Advanced enterprise technology development hub focusing on Web3 protocols.</div></div></a>
-            <a href="https://fragment.com/username/qantia" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qantia</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Memorable abstract brand moniker ideal for data analytics suites or quant labs.</div></div></a>
-            <a href="https://fragment.com/username/seominute" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@seominute</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Express digital tracking platform, rapid marketing analytics and tips feed.</div></div></a>
-            <a href="https://fragment.com/username/bankzen" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@bankzen</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Sleek financial asset layout tailored for calm automated neo-banking apps.</div></div></a>
-            <a href="https://fragment.com/username/finspay" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@finspay</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Universal payment gateway infrastructure built for cross-border commerce checkouts.</div></div></a>
-            <a href="https://fragment.com/username/qanfix" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qanfix</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Fintech auditing workspace, automated lines or capital balance software.</div></div></a>
-            <a href="https://fragment.com/username/qanpay" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qanpay</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Short corporate brand optimized for merchant tools or mobile crypto card processing.</div></div></a>
-            <a href="https://fragment.com/username/qonpay" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qonpay</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Sleek transaction processing module built for instant automated billing tokens.</div></div></a>
-            <!-- ДУБЛЬОВАНІ В ПРЕДСТАВЛЕНОМУ СПИСКУ ЕЛЕМЕНТИ ЗБЕРЕЖЕНО ДЛЯ ПОВНОТИ СТРУКТУРИ КОДУ -->
-            <a href="https://fragment.com/username/bankzen" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@bankzen (2)</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Sleek financial asset management layer concept alternative card index slot.</div></div></a>
-            <a href="https://fragment.com/username/finspay" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@finspay (2)</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Universal e-commerce payment transaction checkout pipeline component.</div></div></a>
-            <a href="https://fragment.com/username/qanfix" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qanfix (2)</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Fintech validation suite alternative data storage platform index holder.</div></div></a>
-            <a href="https://fragment.com/username/qanpay" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qanpay (2)</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Short dynamic transaction link system duplicate entry asset module slot.</div></div></a>
-            <a href="https://fragment.com/username/qiancapital" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qiancapital (2)</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Institutional brand portfolio structure expansion module layout slot.</div></div></a>
-            <a href="https://fragment.com/username/qiancore" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qiancore (2)</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Core engine structural framework block index mirror configuration item.</div></div></a>
-            <a href="https://fragment.com/username/qianflow" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qianflow (2)</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Liquidity channel metric layout asset alternative container tracking cell.</div></div></a>
-            <a href="https://fragment.com/username/qiannet" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qiannet (2)</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Decentralized platform nodes deployment matrix system configuration.</div></div></a>
-            <a href="https://fragment.com/username/qiansys" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qiansys (2)</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Operational custom ledger tools mirror component infrastructure node.</div></div></a>
-            <a href="https://fragment.com/username/qiantech" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qiantech (2)</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Advanced technical protocol software ecosystem mirror directory matrix.</div></div></a>
-            <a href="https://fragment.com/username/qonpay" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@qonpay (2)</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Sleek processing workspace model backup card layer data placeholder.</div></div></a>
-            <a href="https://fragment.com/username/zxxpay" target="_blank" class="asset-item"><div class="asset-card"><div class="asset-main"><span class="asset-name">@zxxpay</span><button class="action-btn">Fragment</button></div><div class="asset-desc">Ultra short checkouts processing brand built for web microtransactions apps.</div></div></a>
-        </div>
-    </div>
-
-    <!-- ТВІЙ ОРИГІНАЛЬНИЙ SEO-ФУТЕР -->
-    <div class="seo-footer">
-        <h2>Premium Digital Identity & Web3 Asset Ecosystem</h2>
-        <p>In the rapidly evolving landscape of decentralized technology, establishing a strong digital presence is paramount. This portfolio showcases a curated collection of high-value Telegram usernames and Web3 brand frameworks tailored for modern enterprises, tech visionaries, and cryptocurrency ventures. Every premium asset listed represents a strategic anchor point within the TON blockchain ecosystem, ensuring uncompromised security, absolute ownership, and smooth peer-to-peer transfers verified directly via the decentralized Fragment ledger.</p>
-        
-        <h3>Strategic Value of Premium Telegram Usernames</h3>
-        <p>A short, memorable, or industry-specific Telegram handle is more than just a contact point—it is a liquid digital commodity. Premium usernames function exactly like traditional high-tier domain names, serving as core entry points for global marketing infrastructure, high-traffic automation bots, localized search engine hubs, and corporate communications networks. By acquiring generic, high-volume organic search terms or brandable tech indicators, businesses secure a definitive competitive advantage, commanding user trust and direct organic discovery inside one of the world's largest privacy-focused messaging networks.</p>
-        
-        <h3>Secure Smart Contract Deployment via Fragment</h3>
-        <p>Security is the foundation of digital asset management. All assets featured within this exclusive marketplace are fully tokenized and bound to the TON ledger. Ownership transfers are executed seamlessly utilizing non-custodial smart contracts on the Fragment platform, eliminating traditional intermediary risks, escrow delays, or administrative complications. Whether scaling institutional fintech neo-banking operations, developing multi-model artificial intelligence frameworks, or expanding regional e-commerce channels, choosing an elite verified name safeguards your future corporate positioning in the next layer of the internet.</p>
-    </div>
-
-</div>
-
-</body>
-</html>
